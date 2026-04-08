@@ -1,0 +1,101 @@
+vsim -gui work.mac
+# vsim -gui work.mac 
+# Start time: 15:50:01 on Feb 26,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.mac(structural)
+# Loading work.mux2_1(behavioral)
+# Loading work.reg_16(behavioral)
+# Loading ieee.numeric_std(body)
+# Loading work.multiplier(behavioral)
+# Loading work.join(behavioral)
+# Loading work.add_sub(behavioral)
+# Loading work.mux2_1_8(behavioral)
+# Loading work.reg_8(behavioral)
+# Loading work.extender(behavioral)
+# Loading work.mux3_1(behavioral)
+# Loading work.tristate_16(behavioral)
+add wave -position end  sim:/mac/dmd
+add wave -position end  sim:/mac/pmd
+add wave -position end  sim:/mac/r
+add wave -position end  sim:/mac/load
+add wave -position end  sim:/mac/sel
+add wave -position end  sim:/mac/en
+add wave -position end  sim:/mac/amf
+add wave -position end  sim:/mac/clk
+add wave -position end  sim:/mac/mv
+add wave -position end  sim:/mac/reset
+add wave -position end  sim:/mac/mx0_out
+add wave -position end  sim:/mac/mx1_out
+add wave -position end  sim:/mac/my0_out
+add wave -position end  sim:/mac/my1_out
+add wave -position end  sim:/mac/mf_out
+add wave -position end  sim:/mac/mr2_extended
+add wave -position end  sim:/mac/mr1_out
+add wave -position end  sim:/mac/mr0_out
+add wave -position end  sim:/mac/mux0_out
+add wave -position end  sim:/mac/mux1_out
+add wave -position end  sim:/mac/mux2_out
+add wave -position end  sim:/mac/mux4_out
+add wave -position end  sim:/mac/mux5_out
+add wave -position end  sim:/mac/mux6_out
+add wave -position end  sim:/mac/mux3_out
+add wave -position end  sim:/mac/mux8_out
+add wave -position end  sim:/mac/mux9_out
+add wave -position end  sim:/mac/mux10_out
+add wave -position end  sim:/mac/r1_out
+add wave -position end  sim:/mac/r0_out
+add wave -position end  sim:/mac/mr2_out
+add wave -position end  sim:/mac/r2_out
+add wave -position end  sim:/mac/mux7_out
+add wave -position end  sim:/mac/mult_out
+add wave -position end  sim:/mac/mr_combined
+force -freeze sim:/mac/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/mac/reset 1 0
+force -freeze sim:/mac/amf 00000 0
+force -freeze sim:/mac/en 000000 0
+force -freeze sim:/mac/dmd 0000000000000000 0
+force -freeze sim:/mac/pmd 000000000000000000000000 0
+force -freeze sim:/mac/r 0000000000000000 0
+force -freeze sim:/mac/load 00000000 0
+force -freeze sim:/mac/sel 000000000000 0
+run
+force -freeze sim:/mac/reset 0 0
+run
+force -freeze sim:/mac/dmd 0000000000000011 0
+force -freeze sim:/mac/load 00000001 0
+run
+force -freeze sim:/mac/load 00000000 0
+run
+force -freeze sim:/mac/dmd 0000000000000100 0
+force -freeze sim:/mac/load 00000010 0
+run
+force -freeze sim:/mac/load 00000000 0
+run
+force -freeze sim:/mac/dmd 0000000000000101 0
+force -freeze sim:/mac/load 00000100 0
+run
+force -freeze sim:/mac/load 00000000 0
+run
+force -freeze sim:/mac/dmd 0000000000000110 0
+force -freeze sim:/mac/load 00001000 0
+run
+force -freeze sim:/mac/load 00000000 0
+run
+force -freeze sim:/mac/sel 000000100100 0
+force -freeze sim:/mac/amf 00001 0
+run
+force -freeze sim:/mac/load 11100000 0
+run
+force -freeze sim:/mac/load 00000000 0
+run
+force -freeze sim:/mac/amf 00010 0
+force -freeze sim:/mac/sel 000000101000 0
+run
+force -freeze sim:/mac/load 11100000 0
+run
+force -freeze sim:/mac/load 00000000 0
+run
